@@ -1,0 +1,456 @@
+Archive member included because of file (symbol)
+
+c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ./HAL/Seven_Segment_Driver/sevSeg_config.o (__do_copy_data)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+LOAD ./MCAL/DIO/DIO_program.o
+LOAD ./HAL/Seven_Segment_Driver/sevSeg_config.o
+LOAD ./HAL/Seven_Segment_Driver/sevSeg_program.o
+LOAD ./HAL/SWITCH_Driver/Switch_config.o
+LOAD ./HAL/SWITCH_Driver/Switch_program.o
+LOAD ./HAL/LED_Driver/LED_config.o
+LOAD ./HAL/LED_Driver/LED_program.o
+LOAD ./APPs/main.o
+LOAD c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x117a
+ *(.vectors)
+ .vectors       0x00000000       0x54 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000054                . = ALIGN (0x2)
+                0x00000054                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000054        0x0 linker stubs
+ *(.trampolines*)
+                0x00000054                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000054                __ctors_start = .
+ *(.ctors)
+                0x00000054                __ctors_end = .
+                0x00000054                __dtors_start = .
+ *(.dtors)
+                0x00000054                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000054        0x0 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000054                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000054        0xc c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000060       0x16 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000060                __do_copy_data
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000076        0x8 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x0000007e        0x4 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x0000007e                __vector_1
+                0x0000007e                __vector_12
+                0x0000007e                __bad_interrupt
+                0x0000007e                __vector_6
+                0x0000007e                __vector_3
+                0x0000007e                __vector_11
+                0x0000007e                __vector_13
+                0x0000007e                __vector_17
+                0x0000007e                __vector_19
+                0x0000007e                __vector_7
+                0x0000007e                __vector_5
+                0x0000007e                __vector_4
+                0x0000007e                __vector_9
+                0x0000007e                __vector_2
+                0x0000007e                __vector_15
+                0x0000007e                __vector_8
+                0x0000007e                __vector_14
+                0x0000007e                __vector_10
+                0x0000007e                __vector_16
+                0x0000007e                __vector_18
+                0x0000007e                __vector_20
+ .text          0x00000082        0x0 ./MCAL/DIO/DIO_program.o
+ .text          0x00000082        0x0 ./HAL/Seven_Segment_Driver/sevSeg_config.o
+ .text          0x00000082        0x0 ./HAL/Seven_Segment_Driver/sevSeg_program.o
+ .text          0x00000082        0x0 ./HAL/SWITCH_Driver/Switch_config.o
+ .text          0x00000082        0x0 ./HAL/SWITCH_Driver/Switch_program.o
+ .text          0x00000082        0x0 ./HAL/LED_Driver/LED_config.o
+ .text          0x00000082        0x0 ./HAL/LED_Driver/LED_program.o
+ .text          0x00000082        0x0 ./APPs/main.o
+ .text          0x00000082        0x0 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000082        0x0 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000082                . = ALIGN (0x2)
+ *(.text.*)
+ .text.DIO_enInit
+                0x00000082       0x56 ./MCAL/DIO/DIO_program.o
+                0x00000082                DIO_enInit
+ .text.DIO_enuSetPortDirection
+                0x000000d8       0x90 ./MCAL/DIO/DIO_program.o
+                0x000000d8                DIO_enuSetPortDirection
+ .text.DIO_enuSetPortValue
+                0x00000168       0x90 ./MCAL/DIO/DIO_program.o
+                0x00000168                DIO_enuSetPortValue
+ .text.DIO_enutogglePort
+                0x000001f8       0xa2 ./MCAL/DIO/DIO_program.o
+                0x000001f8                DIO_enutogglePort
+ .text.DIO_enuGetPortValue
+                0x0000029a       0xb4 ./MCAL/DIO/DIO_program.o
+                0x0000029a                DIO_enuGetPortValue
+ .text.DIO_enuSetPinDirection
+                0x0000034e      0x20a ./MCAL/DIO/DIO_program.o
+                0x0000034e                DIO_enuSetPinDirection
+ .text.DIO_enuSetPinValue
+                0x00000558      0x218 ./MCAL/DIO/DIO_program.o
+                0x00000558                DIO_enuSetPinValue
+ .text.DIO_enutogglePinr
+                0x00000770      0x11e ./MCAL/DIO/DIO_program.o
+                0x00000770                DIO_enutogglePinr
+ .text.DIO_enuGetPinValue
+                0x0000088e       0xf4 ./MCAL/DIO/DIO_program.o
+                0x0000088e                DIO_enuGetPinValue
+ .text._7Seg_enuInit
+                0x00000982      0x30c ./HAL/Seven_Segment_Driver/sevSeg_program.o
+                0x00000982                _7Seg_enuInit
+ .text._7Seg_enuDispayNumber
+                0x00000c8e       0x20 ./HAL/Seven_Segment_Driver/sevSeg_program.o
+                0x00000c8e                _7Seg_enuDispayNumber
+ .text._7Seg_enuClearNumber
+                0x00000cae       0x1a ./HAL/Seven_Segment_Driver/sevSeg_program.o
+                0x00000cae                _7Seg_enuClearNumber
+ .text._7Seg_enuSetDot
+                0x00000cc8       0x1a ./HAL/Seven_Segment_Driver/sevSeg_program.o
+                0x00000cc8                _7Seg_enuSetDot
+ .text._7Seg_enuClearDot
+                0x00000ce2       0x1a ./HAL/Seven_Segment_Driver/sevSeg_program.o
+                0x00000ce2                _7Seg_enuClearDot
+ .text._7Seg_enuEnableCommon
+                0x00000cfc       0x1a ./HAL/Seven_Segment_Driver/sevSeg_program.o
+                0x00000cfc                _7Seg_enuEnableCommon
+ .text._7Seg_enuDisableCommon
+                0x00000d16       0x1a ./HAL/Seven_Segment_Driver/sevSeg_program.o
+                0x00000d16                _7Seg_enuDisableCommon
+ .text.Switch_enuInit
+                0x00000d30       0xec ./HAL/SWITCH_Driver/Switch_program.o
+                0x00000d30                Switch_enuInit
+ .text.Switch_enuGetState
+                0x00000e1c       0x54 ./HAL/SWITCH_Driver/Switch_program.o
+                0x00000e1c                Switch_enuGetState
+ .text.LED_enuInit
+                0x00000e70      0x210 ./HAL/LED_Driver/LED_program.o
+                0x00000e70                LED_enuInit
+ .text.LED_enuTurnOn
+                0x00001080       0x72 ./HAL/LED_Driver/LED_program.o
+                0x00001080                LED_enuTurnOn
+ .text.LED_enuTornOff
+                0x000010f2       0x72 ./HAL/LED_Driver/LED_program.o
+                0x000010f2                LED_enuTornOff
+ .text.main     0x00001164       0x12 ./APPs/main.o
+                0x00001164                main
+ .text.libgcc   0x00001176        0x0 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00001176        0x0 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00001176                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00001176        0x0 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00001176                exit
+                0x00001176                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00001176        0x4 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000117a                _etext = .
+
+.data           0x00800060       0x34 load address 0x0000117a
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060        0x0 ./MCAL/DIO/DIO_program.o
+ .data          0x00800060        0x0 ./HAL/Seven_Segment_Driver/sevSeg_config.o
+ .data          0x00800060        0x0 ./HAL/Seven_Segment_Driver/sevSeg_program.o
+ .data          0x00800060        0x0 ./HAL/SWITCH_Driver/Switch_config.o
+ .data          0x00800060        0x0 ./HAL/SWITCH_Driver/Switch_program.o
+ .data          0x00800060        0x0 ./HAL/LED_Driver/LED_config.o
+ .data          0x00800060        0x0 ./HAL/LED_Driver/LED_program.o
+ .data          0x00800060        0x0 ./APPs/main.o
+ .data          0x00800060        0x0 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ *(.data*)
+ .data.SEVSEG_AstrSegConfig
+                0x00800060       0x26 ./HAL/Seven_Segment_Driver/sevSeg_config.o
+                0x00800060                SEVSEG_AstrSegConfig
+ .data.switch_arrayOfSruct
+                0x00800086        0x6 ./HAL/SWITCH_Driver/Switch_config.o
+                0x00800086                switch_arrayOfSruct
+ .data.LED_AstrLedConfig
+                0x0080008c        0x8 ./HAL/LED_Driver/LED_config.o
+                0x0080008c                LED_AstrLedConfig
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800094                . = ALIGN (0x2)
+                0x00800094                _edata = .
+                0x00800094                PROVIDE (__data_end, .)
+
+.bss            0x00800094        0x0
+                0x00800094                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800094        0x0 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x00800094        0x0 ./MCAL/DIO/DIO_program.o
+ .bss           0x00800094        0x0 ./HAL/Seven_Segment_Driver/sevSeg_config.o
+ .bss           0x00800094        0x0 ./HAL/Seven_Segment_Driver/sevSeg_program.o
+ .bss           0x00800094        0x0 ./HAL/SWITCH_Driver/Switch_config.o
+ .bss           0x00800094        0x0 ./HAL/SWITCH_Driver/Switch_program.o
+ .bss           0x00800094        0x0 ./HAL/LED_Driver/LED_config.o
+ .bss           0x00800094        0x0 ./HAL/LED_Driver/LED_program.o
+ .bss           0x00800094        0x0 ./APPs/main.o
+ .bss           0x00800094        0x0 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800094        0x0 c:/users/aya farid/desktop/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ *(.bss*)
+ *(COMMON)
+                0x00800094                PROVIDE (__bss_end, .)
+                0x0000117a                __data_load_start = LOADADDR (.data)
+                0x000011ae                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800094        0x0
+                0x00800094                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800094                PROVIDE (__noinit_end, .)
+                0x00800094                _end = .
+                0x00800094                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000     0x1f5c
+ *(.stab)
+ .stab          0x00000000      0x93c ./MCAL/DIO/DIO_program.o
+ .stab          0x0000093c      0x1ec ./HAL/Seven_Segment_Driver/sevSeg_config.o
+                                0x1f8 (size before relaxing)
+ .stab          0x00000b28      0x540 ./HAL/Seven_Segment_Driver/sevSeg_program.o
+                                0x564 (size before relaxing)
+ .stab          0x00001068      0x1d4 ./HAL/SWITCH_Driver/Switch_config.o
+                                0x1e0 (size before relaxing)
+ .stab          0x0000123c      0x354 ./HAL/SWITCH_Driver/Switch_program.o
+                                0x378 (size before relaxing)
+ .stab          0x00001590      0x1ec ./HAL/LED_Driver/LED_config.o
+                                0x1f8 (size before relaxing)
+ .stab          0x0000177c      0x444 ./HAL/LED_Driver/LED_program.o
+                                0x48c (size before relaxing)
+ .stab          0x00001bc0      0x39c ./APPs/main.o
+                                0x3a8 (size before relaxing)
+
+.stabstr        0x00000000     0x14a3
+ *(.stabstr)
+ .stabstr       0x00000000     0x14a3 ./MCAL/DIO/DIO_program.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(Seven_segment.elf elf32-avr)
+LOAD linker stubs
