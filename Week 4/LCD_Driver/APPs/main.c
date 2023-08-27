@@ -9,19 +9,48 @@
 #include "../MCAL/DIO/DIO_int.h"
 #include "../HAL/LCD/LCD_int.h"
 #include "util/delay.h"
-
 int main(){
+	u8 my_pattern_array[]={
+		0x07,
+		0x04,
+		0x1f,
+		0x00,
+		0x04,
+		0x04,
+		0x04,
+		0x00,
+
+		0x07,
+		0x04,
+		0x1f,
+		0x00,
+		0x04,
+		0x04,
+		0x04,
+		0x00,
+
+		0x07,
+		0x04,
+		0x1f,
+		0x00,
+		0x04,
+		0x04,
+		0x04,
+		0x00,
+
+		0x07,
+		0x04,
+		0x1f,
+		0x00,
+		0x04,
+		0x04,
+		0x04,
+		0x00
+	};
 	LCD_enuInit();
 	DIO_enuInit();
+	LCD_enuDisplayExtraCGROMData(my_pattern_array,4,0x04,0x8f);
 	while(1){
-		LCD_enuDisplayChar('A');
-		LCD_enuDisplayChar('y');
-		LCD_enuDisplayChar('a');
-		LCD_enuDisplayChar(' ');
-		LCD_enuDisplayChar(':');
-		LCD_enuDisplayChar(')');
-		_delay_ms(3000);
-		LCD_enuSendCommand(0x01);
 	}
 }
 
