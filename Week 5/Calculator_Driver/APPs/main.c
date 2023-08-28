@@ -15,6 +15,7 @@ int string_to_int(char * string);
 int main(){
 	DIO_enuInit();
 	LCD_enuInit();
+	Keypad_enuInit();
 	while(1){
 		u8 keyPressed=0xff,num1[MAX_SIZE],num2[MAX_SIZE],operation,count1=0,count2=0;
 		double num11,num22,result=0;
@@ -22,7 +23,7 @@ int main(){
 		LCD_Line_Column(2,1);
 		while(1){
 			do{
-				getKeyPressed(&keyPressed);
+				KP_GetPressed(&keyPressed);
 			}while(keyPressed==0xff);
 			if(keyPressed=='/'||keyPressed=='+'||keyPressed=='x'||keyPressed=='-'){
 				operation=keyPressed;
@@ -37,7 +38,7 @@ int main(){
 		}
 		while(1){
 			do{
-				getKeyPressed(&keyPressed);
+				KP_GetPressed(&keyPressed);
 			}while(keyPressed==0xff);
 			if(keyPressed=='='){
 				LCD_enuDisplayChar(keyPressed);
@@ -77,7 +78,7 @@ int main(){
 		LCD_String(test);
 		next:
 		do{
-			getKeyPressed(&keyPressed);
+			KP_GetPressed(&keyPressed);
 		}while(keyPressed==0xff);
 		if(keyPressed!='c'){
 			goto next;

@@ -42,7 +42,7 @@ ES_t Keypad_enuInit(void)
 
 	return Local_enuErrorState;
 }
-u8 getKeyPressed(u8* Copy_u8Key)
+u8 KP_GetPressed(u8* Copy_u8Key)
 {
     ES_t Local_Error=ES_NOK;
     if(Copy_u8Key!=NULL)
