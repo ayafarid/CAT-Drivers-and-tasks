@@ -43,4 +43,8 @@
 
 #define D0_PORT DIO_PORTC
 #define D0_PIN DIO_PIN2
+
+#define Direction             Direction_Increment
+#define Direction_Increment   0
+#define Direction_Decrement   1
 #endif /* HAL_LCD_LCD_CONFIG_H_ */

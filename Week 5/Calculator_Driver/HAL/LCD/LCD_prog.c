@@ -48,6 +48,13 @@ ES_t LCD_enuDisplayChar(u8 Copy_u8Data){
 	LCD_vidLatch(Copy_u8Data);
 	return Local_enuErrorState;
 }
+void LCD_String (char *str)		/* Send string to LCD function */
+{
+	unsigned int length=strlen(str);
+	for(int i=0;i<length;i++){
+		LCD_enuDisplayChar(str[i]);
+	}
+}
 ES_t LCD_enuSendCommand(u8 Copy_u8Commad){
 	ES_t Local_enuErrorState=ES_NOK;
 	DIO_enuSetPinValue(RS_PORT,RS_PIN,LOW);

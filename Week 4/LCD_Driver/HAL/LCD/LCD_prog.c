@@ -108,4 +108,66 @@ static inline void LCD_inStaticSendCommand(u8 Copy_u8Commad){
 	_delay_ms(10);
 	DIO_enuSetPinValue(EN_PORT,EN_PIN,LOW);
 }
+ES_t LCD_enuDisplayExtraCGROMData(u8 Copy_u8AData[],u8 Copy_u8NumberOfChar,u8 Copy_u8Entry,u8 returnPosition){
+	ES_t Local_enuErrorState=ES_NOK;
+	    if(Copy_u8NumberOfChar<=8){
+		LCD_inStaticSendCommand(0x40);
+		DIO_enuSetPinValue(RS_PORT,RS_PIN,HIGH);
+		for(u8 i=0;i<Copy_u8NumberOfChar*8;i++){
+			LCD_vidLatch(Copy_u8AData[i]);
+		}
+		if(Copy_u8Entry==0x04){
+			LCD_inStaticSendCommand(returnPosition);
+			LCD_inStaticSendCommand(Copy_u8Entry);
+		}else if(Copy_u8Entry==0x06){
+			LCD_inStaticSendCommand(returnPosition);
+			LCD_inStaticSendCommand(Copy_u8Entry);
+		}
+		for(int i=0;i<Copy_u8NumberOfChar;i++){
+			DIO_enuSetPinValue(RS_PORT,RS_PIN,HIGH);
+			LCD_vidLatch(i);
+		}
+		Local_enuErrorState=ES_OK;
+	}else{
+		Local_enuErrorState=ES_OUT_OF_RANGE;
+	}
+	return Local_enuErrorState;
+}
+ES_t LCD_enuDisplayIntegerNum(s32 Copy_s32Num)
+{
+	ES_t Local_enuErrorState = ES_NOK;
 
+	s32 Local_s32Reverse=0;
+	u8 Local_u8Remainder=0 , Local_u8NumDigit=0;
+
+	if(Copy_s32Num <0)
+	{
+		DIO_enuSetPinValue(RS_PORT , RS_PIN , HIGH);
+		LCD_vidLatch('-');
+		Copy_s32Num *= -1 ;
+	}
+	if(Copy_s32Num!=0)
+	{
+	while (Copy_s32Num)
+	{
+		Local_u8Remainder = Copy_s32Num % 10;
+		Local_s32Reverse = Local_s32Reverse * 10 + Local_u8Remainder;
+		Copy_s32Num /=10;
+		Local_u8NumDigit ++;
+	}
+
+	while (Local_u8NumDigit)
+	{
+		Local_u8Remainder = Local_s32Reverse % 10;
+		DIO_enuSetPinValue(RS_PORT , RS_PIN , HIGH);
+		LCD_vidLatch(Local_u8Remainder + '0');
+		Local_s32Reverse /= 10;
+		Local_u8NumDigit --;
+	}
+	}
+	else
+	{
+		LCD_vidLatch('0');
+	}
+	return Local_enuErrorState;
+}
