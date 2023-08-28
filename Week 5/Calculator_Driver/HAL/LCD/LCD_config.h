@@ -10,7 +10,6 @@
 
 /* LCD MODE */
 #define LCD_MODE  _8_BIT
-#define LCD_CLEAR    0x01
 /* Control Pins */
 #define RS_PORT DIO_PORTA
 #define RS_PIN DIO_PIN0
